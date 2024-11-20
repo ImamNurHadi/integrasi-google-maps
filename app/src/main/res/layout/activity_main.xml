@@ -1,0 +1,63 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/id_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/search_place_1"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Search start location (type 'here' for current)"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:layout_margin="10dp"
+        android:inputType="text" />
+
+    <AutoCompleteTextView
+        android:id="@+id/search_place_2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Search for a second place"
+        android:layout_below="@id/search_place_1"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:layout_margin="10dp"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_start_directions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_place_2"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:text="Start Directions" />
+
+    <Button
+        android:id="@+id/btn_map_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:layout_below="@id/btn_start_directions"
+        android:text="Satelit" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+</RelativeLayout>
